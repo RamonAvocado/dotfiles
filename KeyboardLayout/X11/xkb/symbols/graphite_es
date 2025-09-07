@@ -19,7 +19,7 @@ xkb_symbols "graphite_es_symbols" {
     key <AE12> { [ exclamdown, questiondown ] };
 
     // Segunda fila (QWERTY: QWERTYUIOP) — letras de Graphite
-    key <AD01> { [ z, Z ] };
+    key <AD01> { [ q, Q ] };
     key <AD02> { [ l, L ] };
     key <AD03> { [ d, D ] };
     key <AD04> { [ w, W ] };
@@ -48,7 +48,7 @@ xkb_symbols "graphite_es_symbols" {
     key <AC11> { [ comma, semicolon ] }; // , ;
 
     // Cuarta fila — letras de Graphite + signos del español
-    key <AB01> { [ q, Q ] };
+    key <AB01> { [ z, Z ] };
     key <AB02> { [ x, X ] };
     key <AB03> { [ m, M ] };
     key <AB04> { [ c, C ] };

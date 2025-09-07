@@ -1,6 +1,12 @@
-2025/06/01-18:50:18.519 b36b Reusing MANIFEST /home/ramonavocado/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2025/06/01-18:50:18.520 b36b Recovering log #4
-2025/06/01-18:50:18.527 b36b Reusing old log /home/ramonavocado/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000004.log 
-2025/06/01-19:10:18.565 b36b Level-0 table #8: started
-2025/06/01-19:10:18.580 b36b Level-0 table #8: 1544448 bytes OK
-2025/06/01-19:10:18.586 b36b Delete type=0 #4
+2025/09/07-21:53:00.146 3577 Reusing MANIFEST /home/ramonavocado/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2025/09/07-21:53:00.146 3577 Recovering log #64
+2025/09/07-21:53:00.158 3577 Reusing old log /home/ramonavocado/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000064.log 
+2025/09/07-22:02:51.239 3577 Level-0 table #69: started
+2025/09/07-22:02:51.260 3577 Level-0 table #69: 1327743 bytes OK
+2025/09/07-22:02:51.266 3577 Delete type=0 #64
+2025/09/07-22:05:22.225 35f3 Compacting 1@1 + 1@2 files
+2025/09/07-22:05:22.249 35f3 Generated table #70@1: 1734 keys, 299816 bytes
+2025/09/07-22:05:22.250 35f3 Compacted 1@1 + 1@2 files => 299816 bytes
+2025/09/07-22:05:22.254 35f3 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/09/07-22:05:22.254 35f3 Delete type=2 #69
+2025/09/07-22:05:22.254 35f3 Delete type=2 #66
