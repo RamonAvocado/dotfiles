@@ -2,23 +2,24 @@ default partial alphanumeric_keys
 xkb_symbols "graphite_es_symbols" {
 
     name[Group1] = "Graphite (letras) + Spanish (símbolos)";
+    // NOTE: FOR THE COMMENTS THE FIRST ONE IS NORMAL, THE SECOND IS SHIFT, THE THIRD IS ALTGR
 
-    // Línea superior (Shift + números) — símbolos del layout español
-    key <TLDE> { [ masculine, ordfeminine ] }; // º ª
-    key <AE01> { [ 1, exclam ] };
-    key <AE02> { [ 2, quotedbl ] };
-    key <AE03> { [ 3, periodcentered ] };
-    key <AE04> { [ 4, dollar ] };
-    key <AE05> { [ 5, percent ] };
-    key <AE06> { [ 6, ampersand ] };
-    key <AE07> { [ 7, slash ] };
-    key <AE08> { [ 8, parenleft ] };
-    key <AE09> { [ 9, parenright ] };
-    key <AE10> { [ 0, equal ] };
-    key <AE11> { [ apostrophe, question ] };
-    key <AE12> { [ exclamdown, questiondown ] };
+    // Línea superior (Shift + números)
+    key <TLDE> { [ masculine, ordfeminine ] }; // º, ª
+    key <AE01> { [ 1, exclam ] }; // 1, !
+    key <AE02> { [ 2, quotedbl ] }; // 2, "
+    key <AE03> { [ 3, periodcentered ] }; // 3, ·
+    key <AE04> { [ 4, dollar, asciitilde ] }; // 4, $, ~
+    key <AE05> { [ 5, percent ] }; // 5, %
+    key <AE06> { [ 6, ampersand ] }; // 6, &
+    key <AE07> { [ 7, slash ] }; // 7, /
+    key <AE08> { [ 8, parenleft ] }; // 8, (
+    key <AE09> { [ 9, parenright, less ] }; // 9, ), <
+    key <AE10> { [ 0, equal, greater ] }; // 0, =, >
+    key <AE11> { [ apostrophe, question ] }; //', ?
+    key <AE12> { [ exclamdown, questiondown ] }; //¡, ¿
 
-    // Segunda fila (QWERTY: QWERTYUIOP) — letras de Graphite
+    // Segunda fila (QWERTY: QWERTYUIOP)
     key <AD01> { [ q, Q ] };
     key <AD02> { [ l, L ] };
     key <AD03> { [ d, D ] };
@@ -28,26 +29,25 @@ xkb_symbols "graphite_es_symbols" {
     key <AD07> { [ f, F ] };
     key <AD08> { [ o, O ] };
     key <AD09> { [ u, U ] };
-    key <AD10> { [ underscore, minus ] }; // _ -
-    key <AD11> { [ ntilde, Ntilde ] }; // ñ Ñ
-    key <AD12> { [ plus, asterisk ] }; // + *
-
+    key <AD10> { [ ntilde, Ntilde ] }; // ñ, Ñ
+    key <AD11> { [ bracketleft, braceleft, plus ] }; //[, {, +
+    key <AD12> { [ bracketright, braceright, asterisk ] }; //], }, *
     key <BKSL> { [ ccedilla, Ccedilla ] }; // ç Ç
 
-    // Tercera fila — letras de Graphite
-    key <AC01> { [ n, N ] };
+    // Tercera fila
+    key <AC01> { [ n, N ] }; 
     key <AC02> { [ r, R ] };
     key <AC03> { [ t, T ] };
-    key <AC04> { [ s, S ] };
-    key <AC05> { [ g, G ] };
+    key <AC04> { [ s, S, ssharp ] }; //s, S, ß
+    key <AC05> { [ g, G ] }; 
     key <AC06> { [ y, Y ] };
     key <AC07> { [ h, H ] };
     key <AC08> { [ a, A ] };
     key <AC09> { [ e, E ] };
     key <AC10> { [ i, I ] };
-    key <AC11> { [ comma, semicolon ] }; // , ;
+    key <AC11> { [ dead_acute, dead_grave, dead_diaresis ] }; //´, `,  
 
-    // Cuarta fila — letras de Graphite + signos del español
+    // Cuarta fila
     key <AB01> { [ z, Z ] };
     key <AB02> { [ x, X ] };
     key <AB03> { [ m, M ] };
@@ -55,9 +55,8 @@ xkb_symbols "graphite_es_symbols" {
     key <AB05> { [ v, V ] };
     key <AB06> { [ k, K ] };
     key <AB07> { [ p, P ] };
-    key <AB08> { [ period, colon ] };       // . :
-    key <AB09> { [ minus, underscore ] };   // - _
-    key <AB10> { [ less, greater ] };       // < >
-
+    key <AB08> { [ comma, semicolon ] }; //,, ;
+    key <AB09> { [ period, colon ] }; //., :
+    key <AB10> { [ minus, underscore ] }; //-, _
 };
 
