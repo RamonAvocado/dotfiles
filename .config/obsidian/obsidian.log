@@ -550,3 +550,70 @@
 2025-09-21 20:07:02 Success.
 2025-09-21 20:07:02 Latest version is 1.9.12
 2025-09-21 20:07:02 App is up to date.
+2025-09-24 19:47:54 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.12.asar
+2025-09-24 19:47:54 Checking for update using Github
+2025-09-24 19:47:54 Success.
+2025-09-24 19:47:54 Latest version is 1.9.12
+2025-09-24 19:47:54 App is up to date.
+2025-09-26 19:50:55 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.12.asar
+2025-09-26 19:50:56 Checking for update using Github
+2025-09-26 19:50:56 Failed to check for update using Github (net::ERR_NAME_NOT_RESOLVED)
+2025-09-26 19:50:56 Checking for update using obsidian.md
+2025-09-26 19:50:56 Failed to check for update using obsidian.md (net::ERR_NAME_NOT_RESOLVED)
+2025-09-27 20:04:00 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.12.asar
+2025-09-27 20:04:00 Checking for update using Github
+2025-09-27 20:04:00 Success.
+2025-09-27 20:04:00 Latest version is 1.9.12
+2025-09-27 20:04:00 App is up to date.
+2025-09-28 20:04:13 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.12.asar
+2025-09-28 20:04:13 Checking for update using Github
+2025-09-28 20:04:13 Success.
+2025-09-28 20:04:13 Latest version is 1.9.12
+2025-09-28 20:04:13 App is up to date.
+2025-10-09 17:37:54 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.12.asar
+2025-10-09 17:37:55 Checking for update using Github
+2025-10-09 17:37:55 Success.
+2025-10-09 17:37:55 Latest version is 1.9.14
+2025-10-09 17:37:55 Downloading update from https://github.com/obsidianmd/obsidian-releases/releases/download/v1.9.14/obsidian-1.9.14.asar.gz
+2025-10-09 17:37:55 Verifying hash & signature. Size= 9033685
+2025-10-09 17:37:55 Saving file
+2025-10-09 17:37:56 Update complete.
+2025-10-09 18:37:54 Checking for update using Github
+2025-10-09 18:37:55 Success.
+2025-10-09 18:37:55 Latest version is 1.9.14
+2025-10-09 18:37:55 An update is already downloaded.
+2025-10-09 19:37:54 Checking for update using Github
+2025-10-09 19:37:55 Success.
+2025-10-09 19:37:55 Latest version is 1.9.14
+2025-10-09 19:37:55 An update is already downloaded.
+2025-10-10 20:12:52 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.14.asar
+2025-10-10 20:12:53 Checking for update using Github
+2025-10-10 20:12:53 Success.
+2025-10-10 20:12:53 Latest version is 1.9.14
+2025-10-10 20:12:53 App is up to date.
+2025-10-24 20:07:21 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.14.asar
+2025-10-24 20:07:21 Checking for update using Github
+2025-10-24 20:07:21 Success.
+2025-10-24 20:07:21 Latest version is 1.9.14
+2025-10-24 20:07:21 App is up to date.
+2025-10-25 10:10:17 Loading updated app package /home/ramonavocado/.config/obsidian/obsidian-1.9.14.asar
+2025-10-25 10:10:18 Checking for update using Github
+2025-10-25 10:10:18 Success.
+2025-10-25 10:10:18 Latest version is 1.9.14
+2025-10-25 10:10:18 App is up to date.
+2025-10-25 11:10:17 Checking for update using Github
+2025-10-25 11:10:17 Success.
+2025-10-25 11:10:17 Latest version is 1.9.14
+2025-10-25 11:10:17 App is up to date.
+2025-10-25 12:10:17 Checking for update using Github
+2025-10-25 12:10:17 Success.
+2025-10-25 12:10:17 Latest version is 1.9.14
+2025-10-25 12:10:17 App is up to date.
+2025-10-25 13:10:17 Checking for update using Github
+2025-10-25 13:10:17 Success.
+2025-10-25 13:10:17 Latest version is 1.9.14
+2025-10-25 13:10:17 App is up to date.
+2025-10-25 14:10:17 Checking for update using Github
+2025-10-25 14:10:17 Success.
+2025-10-25 14:10:17 Latest version is 1.9.14
+2025-10-25 14:10:17 App is up to date.
