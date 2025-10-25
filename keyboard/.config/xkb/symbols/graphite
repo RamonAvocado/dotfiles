@@ -1,5 +1,5 @@
 default partial alphanumeric_keys
-xkb_symbols "graphite_es_symbols" {
+xkb_symbols "basic" {
 
     name[Group1] = "Graphite (letras) + Spanish (símbolos)";
     // NOTE: FOR THE COMMENTS THE FIRST ONE IS NORMAL, THE SECOND IS SHIFT, THE THIRD IS ALTGR
