@@ -26,7 +26,7 @@ install_if_missing() {
 }
 
 test_yay_or_paru() {
-	local pkg=$1
+    local pkg=$1
     if command -v yay &> /dev/null; then
         yay -S --noconfirm $pkg
     elif command -v paru &> /dev/null; then
@@ -36,6 +36,7 @@ test_yay_or_paru() {
         echo "Instálalo manualmente con:"
         echo "   git clone https://aur.archlinux.org/zen-browser-bin.git"
         echo "   cd zen-browser-bin && makepkg -si"
+    fi
 }
 
 
@@ -49,7 +50,6 @@ install_if_missing stow
 if ! command -v zen-browser &> /dev/null; then
     echo "🌐 Instalando Zen Browser..."
     test_yay_or_paru zen-browser-bin
-    fi
 else
     echo "✔️ Zen Browser ya está instalado."
 fi
@@ -57,7 +57,6 @@ fi
 if ! command -v nvim&> /dev/null; then
     echo "🌐 Instalando Nvim..."
     test_yay_or_paru neovim
-    fi
 else
     echo "✔️ Nvim ya está instalado."
 fi
