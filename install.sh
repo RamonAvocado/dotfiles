@@ -42,6 +42,7 @@ test_yay_or_paru() {
 
 # --- INSTALAR STOW ---
 install_if_missing stow
+install_if_missing swww
 
 # --- INSTALAR ZEN-BROWSER ---
 # Zen Browser no está en los repos oficiales, pero sí en AUR.
