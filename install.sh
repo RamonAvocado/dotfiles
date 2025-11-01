@@ -44,6 +44,7 @@ test_yay_or_paru() {
 install_if_missing stow
 install_if_missing swww
 install_if_missing kitty
+install_if_missing obsidian
 
 # --- INSTALAR ZEN-BROWSER ---
 # Zen Browser no está en los repos oficiales, pero sí en AUR.

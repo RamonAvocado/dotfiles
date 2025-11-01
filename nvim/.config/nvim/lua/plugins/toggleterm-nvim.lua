@@ -1,4 +1,5 @@
 -- A TERMINAL INSIDE NEOVIM
+
 return {
   'akinsho/toggleterm.nvim',
   version = '*',
@@ -8,4 +9,8 @@ return {
     shade_terminals = true,
     start_in_insert = true,
   },
+  config = function(_, opts)
+    require('toggleterm').setup(opts)
+    require('config.keymaps.toggleterm').setup()
+  end,
 }
