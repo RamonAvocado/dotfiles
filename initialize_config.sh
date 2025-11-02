@@ -1,3 +1,4 @@
+# ADD THE ELIMITION OF ALL THE OTHERS REPOSITORIES IF THEY EXIST PREVIOUSLY
 stow browser
 stow hyprland
 stow nvim
