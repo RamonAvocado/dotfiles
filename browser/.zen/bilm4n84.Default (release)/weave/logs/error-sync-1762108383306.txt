@@ -1,0 +1,66 @@
+1762102626662	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1762102650131	FirefoxAccounts	INFO	checking if the command queue is empty now we are idle
+1762102650133	FirefoxAccounts	TRACE	flushQueue total queued items: 0
+1762102650133	FirefoxAccounts	INFO	No new close-tab timer needed
+1762102650133	FirefoxAccounts	INFO	pending command check had no commands
+1762102708819	Sync.Engine.Tabs.Tracker	DEBUG	Detected a tab change, but conditions aren't met for a quick write or a score bump
+1762103198113	Sync.SyncScheduler	DEBUG	Going to sleep, doing a quick sync.
+1762103198115	Sync.Service	DEBUG	User-Agent: Zen/1.17.3b (Linux x86_64) FxSync/1.146.0.20251024115505.desktop
+1762103198116	Sync.Service	INFO	Starting sync at 2025-11-02 18:06:38 in browser session 5BwM8Om2n4_g
+1762103198118	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1762103198119	Sync.Status	INFO	Resetting Status.
+1762103198119	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1762103198121	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1762103198121	FirefoxAccounts	DEBUG	getOAuthToken enter
+1762103198122	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1762103198122	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1762103198122	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1762103198531	Sync.Resource	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/info/collections
+1762103198532	Sync.Service	DEBUG	Fetching global metadata record
+1762103198532	Sync.Service	DEBUG	Weave Version: 1.146.0 Local Storage: 5 Remote Storage: 5
+1762103198532	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1762103198532	Sync.Service	INFO	Testing info/collections: {"meta":1748076202.66,"passwords":1761409462.79,"tabs":1762102626,"bookmarks":1748076200.77,"addons":1756019400.95,"crypto":1748076197.53,"history":1762102626.39,"extension-storage":1762074638.72,"clients":1762102624.84,"prefs":1761402626.2}
+1762103198532	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1748076197.53
+1762103198533	Sync.Synchronizer	INFO	Updating enabled engines: 1 clients.
+1762103198534	Sync.Synchronizer	INFO	Syncing specified engines: ["tabs"]
+1762103198594	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/open-uri
+1762103198595	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/close-uri/v1
+1762103198640	Sync.Engine.Tabs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1762103198647	Sync.Engine.Tabs	INFO	Uploading 1 outgoing records
+1762103198683	Sync.Engine.Tabs	INFO	Posting 1 records of 75691 bytes with batch=true
+1762103198699	Sync.Collection	DEBUG	POST Length: 75691
+1762103198725	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile 304
+1762108084450	Sync.SyncScheduler	DEBUG	Woke from sleep.
+1762108084450	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1762108085443	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1762108085443	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1762108085444	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1762108085449	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1762108091094	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1762108091094	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1762108091103	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1762108091106	Sync.Service	DEBUG	User-Agent: Zen/1.17.3b (Linux x86_64) FxSync/1.146.0.20251024115505.desktop
+1762108091107	Sync.Service	INFO	Starting sync at 2025-11-02 19:28:11 in browser session 5BwM8Om2n4_g
+1762108091107	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.sys.mjs:43:5) JS Stack trace: LockException@util.sys.mjs:43:5
+throwLockException@util.sys.mjs:127:11
+WrappedLock@util.sys.mjs:141:15
+_lockedSync@service.sys.mjs:1382:6
+sync/<@service.sys.mjs:1356:18
+WrappedCatch@util.sys.mjs:112:27
+sync@service.sys.mjs:1357:7
+1762108091108	Sync.Service	INFO	Cannot start sync: already syncing?
+1762108383289	Sync.Collection	ERROR	Request timed out after 300000ms. Aborting.
+1762108383289	Sync.Collection	WARN	POST request to https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/storage/tabs?batch=true&commit=true failed: AbortError: The operation was aborted.  Stack trace: _doRequest/timeoutId<()@resource://services-sync/resource.sys.mjs:179
+notify()@resource://gre/modules/Timer.sys.mjs:66
+1762108383291	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1762108383291	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1762108383291	Sync.Status	DEBUG	Status for engine tabs: error.engine.reason.unknown_fail
+1762108383291	Sync.Status	DEBUG	Status.service: error.sync.failed => error.sync.failed_partial
+1762108383291	Sync.ErrorHandler	DEBUG	tabs failed: [Exception... "Request aborted (timeout)"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "JS frame :: resource://services-sync/resource.sys.mjs :: _doRequest :: line 189"  data: no] Stack trace: _doRequest()@resource://services-sync/resource.sys.mjs:189
+1762108383292	Sync.Synchronizer	INFO	Sync completed at 2025-11-02 19:33:03 after 5185.17 secs.
+1762108383293	Sync.Declined	DEBUG	Handling remote declined: []
+1762108383293	Sync.Declined	DEBUG	Handling local declined: []
+1762108383294	Sync.Declined	DEBUG	Declined changed? false
+1762108383294	Sync.Service	INFO	No change to declined engines. Not reuploading meta/global.
+1762108383300	Sync.ErrorHandler	ERROR	Some engines did not sync correctly.
+1762108383302	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)

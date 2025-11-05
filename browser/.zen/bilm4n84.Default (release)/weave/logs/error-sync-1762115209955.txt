@@ -1,0 +1,41 @@
+1762115200459	Sync.LogManager	DEBUG	Flushing file log
+1762115200470	Sync.SyncScheduler	DEBUG	Woke from sleep.
+1762115200471	Sync.LogManager	DEBUG	Log cleanup threshold time: 1761251200471
+1762115200475	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1762115200488	Sync.LogManager	DEBUG	Done deleting files.
+1762115201435	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1762115201435	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1762115201437	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1762115201444	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1762115208989	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1762115208989	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1762115209001	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1762115209007	Sync.Service	DEBUG	User-Agent: Zen/1.17.3b (Linux x86_64) FxSync/1.146.0.20251024115505.desktop
+1762115209008	Sync.Service	INFO	Starting sync at 2025-11-02 21:26:49 in browser session 5BwM8Om2n4_g
+1762115209013	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1762115209015	Sync.Status	INFO	Resetting Status.
+1762115209015	Sync.Status	DEBUG	Status.service: error.sync.failed => success.status_ok
+1762115209434	Sync.Resource	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/info/collections
+1762115209435	Sync.Service	DEBUG	Fetching server configuration: https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/info/configuration
+1762115209702	Sync.Resource	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/info/configuration
+1762115209703	Sync.Service	DEBUG	Fetching global metadata record
+1762115209703	Sync.Service	DEBUG	Weave Version: 1.146.0 Local Storage: 5 Remote Storage: 5
+1762115209704	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1762115209704	Sync.Service	INFO	Testing info/collections: {"clients":1762102624.84,"meta":1748076202.66,"passwords":1761409462.79,"extension-storage":1762074638.72,"bookmarks":1748076200.77,"crypto":1748076197.53,"prefs":1761402626.2,"history":1762102626.39,"tabs":1762103199.07,"addons":1756019400.95}
+1762115209704	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1748076197.53
+1762115209704	Sync.Synchronizer	DEBUG	Refreshing client list.
+1762115209705	Sync.Engine.Clients	DEBUG	Resetting clients last sync time
+1762115209916	Sync.Collection	DEBUG	GET fail 401 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/storage/clients?full=1&limit=1000
+1762115209916	Sync.Collection	WARN	GET request to https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/storage/clients?full=1&limit=1000 failed with status 401
+1762115209917	Sync.Service	INFO	Logging out
+1762115209917	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1762115209919	Sync.ErrorHandler	INFO	Got 401 response; resetting clusterURL.
+1762115209919	Sync.ErrorHandler	DEBUG	New mid-sync 401 failure. Making a note.
+1762115209920	Sync.ErrorHandler	INFO	Attempting to schedule another sync.
+1762115209920	Sync.Status	DEBUG	Status for engine clients: error.engine.reason.record_download_fail
+1762115209920	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed_partial
+1762115209920	Sync.ErrorHandler	DEBUG	clients failed: {"data":"0","url":"https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/269976526/storage/clients?full=1&limit=1000","status":401,"success":false,"headers":{"accept-ranges":"bytes","content-length":"1","content-type":"application/json","date":"Sun, 02 Nov 2025 20:26:49 GMT","server":"nginx/1.22.0","vary":"Origin, Access-Control-Request-Method, Access-Control-Request-Headers","via":"1.1 google, 1.1 varnish, 1.1 varnish","x-cache":"MISS, MISS","x-cache-hits":"0, 0","x-firefox-spdy":"h2","x-served-by":"cache-mad2200112-MAD, cache-mad2200122-MAD","x-timer":"S1762115210.718920,VS0,VE172","x-weave-timestamp":"1762115209.80"},"obj":0,"failureCode":"error.engine.reason.record_download_fail"}
+1762115209921	Sync.Synchronizer	WARN	Client engine sync failed. Aborting.
+1762115209924	Sync.ErrorHandler	ERROR	Some engines did not sync correctly.
+1762115209926	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1762115209927	Sync.Telemetry	INFO	Early submission of sync telemetry due to changed IDs/NodeType
