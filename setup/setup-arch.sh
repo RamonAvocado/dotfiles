@@ -221,11 +221,6 @@ curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 
 source $SCRIPT_DIR/_prebuilt.sh
 
-# --------------------------------------------------------------
-# ML4W Apps
-# --------------------------------------------------------------
-
-source $SCRIPT_DIR/_ml4w-apps.sh
 
 # --------------------------------------------------------------
 # Flatpaks
