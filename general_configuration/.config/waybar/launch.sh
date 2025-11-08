@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -x                              # traza de cada comando
+
 #                    __
 #  _    _____ ___ __/ /  ___ _____
 # | |/|/ / _ `/ // / _ \/ _ `/ __/
