@@ -2,9 +2,13 @@ local M = {}
 
 function M.setup()
   local map = vim.keymap.set
-  map('n', '<leader>tt', function()
+  map('n', '<leader>th', function()
     require('toggleterm.terminal').Terminal:new({ direction = 'horizontal' }):toggle()
   end, { desc = 'ToggleTerm horizontal' })
+
+  map('n', '<leader>tt', function()
+    require('toggleterm.terminal').Terminal:new({ direction = 'vertical' }):toggle()
+  end, { desc = 'ToggleTerm vertical' })
 
   map('n', '<leader>tf', '<cmd>ToggleTerm direction=float<cr>', { desc = 'ToggleTerm float' })
 
