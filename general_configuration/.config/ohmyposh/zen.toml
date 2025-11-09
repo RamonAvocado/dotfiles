@@ -41,6 +41,18 @@ final_space = true
       commit_icon = '@'
       fetch_status = true
 
+  # MANAGE THE ENV WHEN YOU ACTIVE IT IN PYTHON
+  # WORKS WITH .config/bashrc/custom/venv.sh
+  [[blocks.segments]]
+    type = "python"
+    style = "plain"
+    foreground = "green"
+    template = " ({{ .Venv }})"
+
+    [blocks.segments.properties]
+      display_mode = "environment"
+      fetch_virtual_env = true
+
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
