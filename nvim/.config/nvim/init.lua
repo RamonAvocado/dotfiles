@@ -174,6 +174,7 @@ require('lazy').setup({
   require 'plugins.toggleterm-nvim',
 
   require 'plugins.treesitter',
+  require 'plugins.neo-tree',
   -- LSP
   require 'plugins.LSP.lazydev',
   require 'plugins.LSP.lsp-config',

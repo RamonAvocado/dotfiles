@@ -101,3 +101,58 @@ return {
     end, { desc = '[S]earch [N]eovim files' })
   end,
 }
+
+-- {
+-- 'nvim-telescope/telescope.nvim',
+-- branch = '0.1.x',
+-- dependencies = { 'nvim-lua/plenary.nvim' },
+-- config = function()
+-- local telescope = require('telescope')
+-- local builtin = require('telescope.builtin')
+--
+--
+-- telescope.setup {
+-- defaults = {
+-- mappings = {
+-- i = {
+-- ["<C-j>"] = "move_selection_next",
+-- ["<C-k>"] = "move_selection_previous",
+-- },
+-- },
+-- },
+-- }
+--
+--
+-- local map = vim.keymap.set
+-- local function smart_files()
+-- local ok = pcall(builtin.git_files, { show_untracked = true })
+-- if not ok then builtin.find_files() end
+-- end
+--
+--
+-- -- Core
+-- map('n', '<leader>ff', smart_files, { desc = 'Telescope: Find files (smart)' })
+-- map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope: Live grep' })
+-- map('n', '<leader>fb', builtin.buffers, { desc = 'Telescope: Buffers' })
+-- map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope: Help tags' })
+-- map('n', '<leader>fr', builtin.resume, { desc = 'Telescope: Resume' })
+-- map('n', '<leader>fo', builtin.oldfiles, { desc = 'Telescope: Old files' })
+-- map('n', '<leader>fc', builtin.commands, { desc = 'Telescope: Commands' })
+-- map('n', '<leader>fk', builtin.keymaps, { desc = 'Telescope: Keymaps' })
+--
+--
+-- -- Git
+-- map('n', '<leader>gs', builtin.git_status, { desc = 'Telescope: Git status' })
+-- map('n', '<leader>gc', builtin.git_commits, { desc = 'Telescope: Git commits' })
+-- map('n', '<leader>gb', builtin.git_branches, { desc = 'Telescope: Git branches' })
+--
+--
+-- -- LSP
+-- map('n', '<leader>ld', builtin.lsp_definitions, { desc = 'Telescope (LSP): Definitions' })
+-- map('n', '<leader>lr', builtin.lsp_references, { desc = 'Telescope (LSP): References' })
+-- map('n', '<leader>li', builtin.lsp_implementations, { desc = 'Telescope (LSP): Implementations' })
+-- map('n', '<leader>ls', builtin.lsp_document_symbols, { desc = 'Telescope (LSP): Document symbols' })
+-- map('n', '<leader>lS', builtin.lsp_workspace_symbols, { desc = 'Telescope (LSP): Workspace symbols' })
+-- map('n', '<leader>le', builtin.diagnostics, { desc = 'Telescope (LSP): Diagnostics (workspace)' })
+-- end,
+-- }
