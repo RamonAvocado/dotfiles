@@ -8,7 +8,15 @@ return {
     'MunifTanjim/nui.nvim',
   },
   config = function()
-    require('neo-tree').setup {}
+    require('neo-tree').setup {
+      filesystem = {
+        filtered_items = {
+          visible = true, -- Permite alternar visibilidad con I
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+      },
+    }
     require('config.keymaps.neo-tree').setup()
   end,
 }
