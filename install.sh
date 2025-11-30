@@ -46,6 +46,13 @@ install_if_missing swww
 install_if_missing kitty
 install_if_missing obsidian
 
+# PACKAGES
+install_if_missing nodejs
+install_if_missing npm
+
+# UTILITIES 
+install_if_missing tree
+
 # --- INSTALAR ZEN-BROWSER ---
 # Zen Browser no está en los repos oficiales, pero sí en AUR.
 # Intentamos instalarlo si existe 'yay' o 'paru', o damos instrucción manual.
