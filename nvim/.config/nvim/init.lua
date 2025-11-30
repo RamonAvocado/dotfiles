@@ -1,11 +1,10 @@
 --[[
 FIXME: LISTA DE PLUGINS QUE VIENEN INSTALADOS CON KICKSTART
 
-lazy.nvim - PLUGIN MANAGER
+lazy.nvim 
 'lewis6991/gitsigns.nvim', - COSAS DE GIT
 'folke/which-key.nvim', - VER LAS POSIBLES COMBINACIONES DE TECLAS QUE TIENES
 'nvim-telescope/telescope.nvim', - VIM TELESCOPE CREO QUE ES PARA BUSCAR ARCHIVOS Y DE TODO
-
 NOTE: COSAS DEL LSP
 
 'folke/lazydev.nvim',
@@ -164,14 +163,12 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
-require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+require('lazy').setup({ -- PLUGIN MANAGER
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   'theprimeagen/harpoon',
-  require 'plugins.gitsings',
   require 'plugins.which-key',
   require 'plugins.telescope',
-  require 'plugins.toggleterm-nvim',
+  require 'plugins.toggleterm', -- Highlight todo, notes, etc in comments
 
   require 'plugins.treesitter',
   require 'plugins.neo-tree',
@@ -182,8 +179,17 @@ require('lazy').setup({
   require 'plugins.conform',
   require 'plugins.blink',
 
+  require 'plugins.autopairs', -- Automatically adds the other pair, for example (, [, ", {
   require 'plugins.todo-comments',
-  require 'plugins.mini-vim',
+  require 'plugins.indent_line', -- Automatically adjust the indent size to much the same as the file
+
+  require 'plugins.utilities.mini-vim', -- A combination of small plugins for various things keybind related
+
+  -- GIT
+  -- require 'plugins.git.diffview', -- With super + gc open the merge screen
+  -- GIT SIGNS HAS SOMETHING ABOUT DIFF TOO, WHEN THE PROBLEM OCURR COMPARE DIFFVIEW AND GITSIGN
+  -- require 'plugins.git.gitsings', -- Git stuff and lots of commands
+  require 'plugins.git.gitsigns',
 
   -- COLORSCHEME
   require 'colorscheme.tokyonight',
@@ -219,11 +225,8 @@ require('lazy').setup({
 --  Uncomment any of the lines below to enable them (you will need to restart nvim).
 --
 -- require 'kickstart.plugins.debug',
--- require 'kickstart.plugins.indent_line',
 -- require 'kickstart.plugins.lint',
--- require 'kickstart.plugins.autopairs',
 -- require 'kickstart.plugins.neo-tree',
--- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
 -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 --    This is the easiest way to modularize your config.
