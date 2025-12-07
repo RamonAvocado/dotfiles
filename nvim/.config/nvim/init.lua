@@ -1,12 +1,10 @@
 --[[
---
-FIXME: LISTA DE PLUGINS QUE VIENEN INSTALADOS CON KICKSTART
 
 lazy.nvim 
-'lewis6991/gitsigns.nvim', - COSAS DE GIT
 'folke/which-key.nvim', - VER LAS POSIBLES COMBINACIONES DE TECLAS QUE TIENES
 'nvim-telescope/telescope.nvim', - VIM TELESCOPE CREO QUE ES PARA BUSCAR ARCHIVOS Y DE TODO
-NOTE: COSAS DEL LSP
+
+ NOTE: COSAS DEL LSP
 
 'folke/lazydev.nvim',
 'neovim/nvim-lspconfig',
@@ -15,14 +13,8 @@ NOTE: COSAS DEL LSP
 'saghen/blink.cmp', - AUTOCOMPLETADO
 
 'folke/tokyonight.nvim', - COLOR GUAPO
-'folke/todo-comments.nvim', - COMENTARIOS CON COLORES
-'echasnovski/mini.nvim', - COLECCION DE ALGUNOS PLUGINS PEQUEÑITOS
 'nvim-treesitter/nvim-treesitter', - TREESITTER
-
-FIXME: LISTA DE PLUGINS QUE VIENEN INSTALADOS CON KICKSTART
-
 --]]
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 
 require 'config.keymaps'
 require 'config.options'

@@ -9,32 +9,32 @@ return {
   -- Highlight todo, notes, etc in comments
   require 'plugins.toggleterm',
 
-  require 'plugins.treesitter',
+  require 'plugins.treesitter.treesitter',
   require 'plugins.neo-tree',
 
   -- LSP --
   -- Specific plugin for Plugin development
-  require 'plugins.LSP.lazydev',
-  require 'plugins.LSP.lsp-config',
+  require 'plugins.lsp.lazydev',
+  require 'plugins.lsp.lsp-config',
 
   require 'plugins.conform',
   require 'plugins.blink',
   require 'plugins.snacks',
 
-  -- Automatically adds the other pair, for example (, [, ", {
-  require 'plugins.autopairs',
-  -- Colors the TODO FIXME comments
-  require 'plugins.todo-comments',
   -- Automatically adjust the indent size to much the same as the file
   require 'plugins.indent-line',
 
   -- A combination of small plugins for various things keybind related
-  require 'plugins.utilities.mini-vim',
+  require 'plugins.util.mini-vim',
+  -- Automatically adds the other pair, for example (, [, ", {
+  require 'plugins.util.autopairs',
+  -- Colors the TODO FIXME comments
+  require 'plugins.util.todo-comments',
+  require 'plugins.util.trouble',
 
   -- GIT
   -- require 'plugins.git.diffview', -- With super + gc open the merge screen
   -- GIT SIGNS HAS SOMETHING ABOUT DIFF TOO, WHEN THE PROBLEM OCURR COMPARE DIFFVIEW AND GITSIGN
-  -- require 'plugins.git.gitsings', -- Git stuff and lots of commands
   require 'plugins.git.gitsigns',
   require 'plugins.git.neogit',
 
