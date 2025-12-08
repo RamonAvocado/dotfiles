@@ -4,13 +4,19 @@ return {
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
   require 'plugins.harpoon',
+  -- Pop up that tells which key combinations is needed to do something
   require 'plugins.which-key',
-  require 'plugins.telescope',
+
+  -- TELESCOPE Tool for searching everything
+  require 'plugins.telescope.telescope',
   -- Highlight todo, notes, etc in comments
   require 'plugins.toggleterm',
 
   require 'plugins.treesitter.treesitter',
+
+  --FILE EXPLORER
   require 'plugins.neo-tree',
+  require 'plugins.snacks',
 
   -- LSP --
   -- Specific plugin for Plugin development
@@ -19,11 +25,11 @@ return {
 
   require 'plugins.conform',
   require 'plugins.blink',
-  require 'plugins.snacks',
 
   -- Automatically adjust the indent size to much the same as the file
   require 'plugins.indent-line',
 
+  -- UTIL
   -- A combination of small plugins for various things keybind related
   require 'plugins.util.mini-vim',
   -- Automatically adds the other pair, for example (, [, ", {
@@ -32,6 +38,9 @@ return {
   require 'plugins.util.todo-comments',
   require 'plugins.util.trouble',
 
+  -- UI
+  require 'plugins.ui.noice',
+
   -- GIT
   -- require 'plugins.git.diffview', -- With super + gc open the merge screen
   -- GIT SIGNS HAS SOMETHING ABOUT DIFF TOO, WHEN THE PROBLEM OCURR COMPARE DIFFVIEW AND GITSIGN
@@ -39,7 +48,8 @@ return {
   require 'plugins.git.neogit',
 
   -- #####COLORSCHEME##### --
-  require 'colorscheme.tokyonight',
+  -- require 'colorscheme.tokyonight',
+  require 'colorscheme.catppuchin',
 }
 
 --

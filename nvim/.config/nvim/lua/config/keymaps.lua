@@ -36,8 +36,12 @@ vim.keymap.set('i', 'ß', '<Esc>', { noremap = true, silent = true }) -- TO EXIT
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format) -- TO FORMAT THE CODE
 
-vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- TO REPLACE ALL THE WORD NAMED THE SAME AS THE ONE IM STANDING
-vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true }) -- TO MAKE SCRIPS EXECUTABLE
+-- vim.keymap.set('n', 'grnf', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace all the word that im standing on' }) -- TO REPLACE ALL THE WORD NAMED THE SAME AS THE ONE IM STANDING
+vim.keymap.set('n', 'grnf', [[:.,$s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace word under cursor from this line downward' }) -- TO WORD NAMED THE SAME AS THE ONE IM STANDING ONWARDS
+-- vim.keymap.set('x', 'grnf', [["sy:%s/<C-r>s/<C-r>s/gI<Left><Left><Left>]], { desc = 'Replace all occurrences of selected text' })
+vim.keymap.set('x', 'grnf', [["sy:'<,$s/<C-r>s/<C-r>s/gI<Left><Left><Left>]], { desc = 'Replace selected text from selection start line downward' })
+
+vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true, desc = 'Makes the current file executable' }) -- TO MAKE SCRIPS EXECUTABLE
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
