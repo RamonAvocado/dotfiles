@@ -1,18 +1,10 @@
 --[[
-
-lazy.nvim 
-'folke/which-key.nvim', - VER LAS POSIBLES COMBINACIONES DE TECLAS QUE TIENES
-'nvim-telescope/telescope.nvim', - VIM TELESCOPE CREO QUE ES PARA BUSCAR ARCHIVOS Y DE TODO
-
- NOTE: COSAS DEL LSP
-
 'folke/lazydev.nvim',
 'neovim/nvim-lspconfig',
 
 'stevearc/conform.nvim', - AUTOFORMATO
 'saghen/blink.cmp', - AUTOCOMPLETADO
 
-'folke/tokyonight.nvim', - COLOR GUAPO
 'nvim-treesitter/nvim-treesitter', - TREESITTER
 --]]
 
