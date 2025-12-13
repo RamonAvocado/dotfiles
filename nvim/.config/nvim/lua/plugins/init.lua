@@ -10,7 +10,7 @@ return {
   -- TELESCOPE Tool for searching everything
   require 'plugins.telescope.telescope',
   -- Highlight todo, notes, etc in comments
-  require 'plugins.toggleterm',
+  -- require 'plugins.toggleterm',
 
   require 'plugins.treesitter.treesitter',
 

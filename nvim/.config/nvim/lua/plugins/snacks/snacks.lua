@@ -7,7 +7,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
-    explorer = { enabled = false },
+    explorer = { enabled = false }, --EXPLORER OR NEO-TREE
     indent = { enabled = false },
     input = { enabled = false },
     picker = { enabled = false }, -- PENSARME SI USAR ESTE PICKER O EL DE SIEMPRE
@@ -17,6 +17,39 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    terminal = require 'plugins.snacks.terminal',
+  },
+  keys = {
+    --     {
+    --       '<leader>:',
+    --       function()
+    --         Snacks.picker.command_history()
+    --       end,
+    --       desc = 'Command History',
+    --     },
+    --     {
+    --       '<leader>e',
+    --       function()
+    --         Snacks.explorer()
+    --       end,
+    --       desc = 'File Explorer',
+    --     },
+    --     PERF: QUE COJONES ES PICKER
+    --     TODO: GOOD IDEA BUT BETTER IF TELESCOPE
+    --     {
+    --       '<leader>fp',
+    --       function()
+    --         Snacks.picker.projects()
+    --       end,
+    --       desc = 'Projects',
+    --     },
+    --     {
+    --       '<leader>fr',
+    --       function()
+    --         Snacks.picker.recent()
+    --       end,
+    --       desc = 'Recent',
+    --     },
   },
 }
 -- return {
@@ -176,6 +209,7 @@ return {
 --       end,
 --       desc = 'Git Diff (Hunks)',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>gf',
 --       function()
@@ -184,6 +218,7 @@ return {
 --       desc = 'Git Log File',
 --     },
 --     -- gh
+--     TODO: INTERESTING
 --     {
 --       '<leader>gi',
 --       function()
@@ -191,6 +226,7 @@ return {
 --       end,
 --       desc = 'GitHub Issues (open)',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>gI',
 --       function()
@@ -198,6 +234,7 @@ return {
 --       end,
 --       desc = 'GitHub Issues (all)',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>gp',
 --       function()
@@ -205,6 +242,7 @@ return {
 --       end,
 --       desc = 'GitHub Pull Requests (open)',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>gP',
 --       function()
@@ -212,6 +250,7 @@ return {
 --       end,
 --       desc = 'GitHub Pull Requests (all)',
 --     },
+--     TODO: INTERESTING
 --     -- Grep
 --     {
 --       '<leader>sb',
@@ -250,6 +289,7 @@ return {
 --       end,
 --       desc = 'Registers',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>s/',
 --       function()
@@ -257,6 +297,7 @@ return {
 --       end,
 --       desc = 'Search History',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>sa',
 --       function()
@@ -264,6 +305,7 @@ return {
 --       end,
 --       desc = 'Autocmds',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>sb',
 --       function()
@@ -271,6 +313,7 @@ return {
 --       end,
 --       desc = 'Buffer Lines',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>sc',
 --       function()
@@ -278,6 +321,7 @@ return {
 --       end,
 --       desc = 'Command History',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>sC',
 --       function()
@@ -285,6 +329,7 @@ return {
 --       end,
 --       desc = 'Commands',
 --     },
+--     TODO: INTERESTING MAYBE BETTER THAN LEADER OD
 --     {
 --       '<leader>sd',
 --       function()
@@ -362,6 +407,7 @@ return {
 --       end,
 --       desc = 'Search for Plugin Spec',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>sq',
 --       function()
@@ -369,6 +415,7 @@ return {
 --       end,
 --       desc = 'Quickfix List',
 --     },
+--     TODO: INTERESTING WHAT DOES IT MEAN BY RESUME
 --     {
 --       '<leader>sR',
 --       function()
@@ -376,6 +423,7 @@ return {
 --       end,
 --       desc = 'Resume',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>su',
 --       function()
@@ -383,6 +431,7 @@ return {
 --       end,
 --       desc = 'Undo History',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>uC',
 --       function()
@@ -444,7 +493,7 @@ return {
 --     {
 --       '<leader>ss',
 --       function()
---         Snacks.picker.lsp_symbols()
+--         snacks.picker.lsp_symbols()
 --       end,
 --       desc = 'LSP Symbols',
 --     },
@@ -455,6 +504,7 @@ return {
 --       end,
 --       desc = 'LSP Workspace Symbols',
 --     },
+--     TODO: INTERESTING
 --     -- Other
 --     {
 --       '<leader>z',
@@ -463,6 +513,7 @@ return {
 --       end,
 --       desc = 'Toggle Zen Mode',
 --     },
+--     TODO: INTERESTING
 --     {
 --       '<leader>Z',
 --       function()
@@ -470,6 +521,7 @@ return {
 --       end,
 --       desc = 'Toggle Zoom',
 --     },
+--     TODO: WHAT IS SCRATCH
 --     {
 --       '<leader>.',
 --       function()
@@ -526,20 +578,6 @@ return {
 --         Snacks.notifier.hide()
 --       end,
 --       desc = 'Dismiss All Notifications',
---     },
---     {
---       '<c-/>',
---       function()
---         Snacks.terminal()
---       end,
---       desc = 'Toggle Terminal',
---     },
---     {
---       '<c-_>',
---       function()
---         Snacks.terminal()
---       end,
---       desc = 'which_key_ignore',
 --     },
 --     {
 --       ']]',
