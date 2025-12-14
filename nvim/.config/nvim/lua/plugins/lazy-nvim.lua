@@ -1,3 +1,0 @@
--- TODO:
--- Lazy.nvim
-return {}

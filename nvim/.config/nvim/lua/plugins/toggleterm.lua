@@ -19,6 +19,6 @@ return {
   },
   config = function(_, opts)
     require('toggleterm').setup(opts)
-    require('config.keymaps.toggleterm').setup()
+    -- require('config.keymaps.toggleterm').setup()
   end,
 }

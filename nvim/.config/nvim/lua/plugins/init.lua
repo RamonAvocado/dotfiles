@@ -3,20 +3,20 @@ return {
   -- Detect tabstop and shiftwidth automatically
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
+  require 'plugins.edgy',
   require 'plugins.harpoon',
   -- Pop up that tells which key combinations is needed to do something
   require 'plugins.which-key',
 
   -- TELESCOPE Tool for searching everything
   require 'plugins.telescope.telescope',
-  -- Highlight todo, notes, etc in comments
-  -- require 'plugins.toggleterm',
 
   require 'plugins.treesitter.treesitter',
 
   --FILE EXPLORER
   require 'plugins.neo-tree',
-  require 'plugins.snacks',
+  -- LOT OF QOL
+  require 'plugins.snacks.snacks',
 
   -- LSP --
   -- Specific plugin for Plugin development
@@ -27,7 +27,7 @@ return {
   require 'plugins.blink',
 
   -- Automatically adjust the indent size to much the same as the file
-  require 'plugins.indent-line',
+  -- require 'plugins.indent-line',
 
   -- UTIL
   -- A combination of small plugins for various things keybind related
@@ -36,6 +36,10 @@ return {
   require 'plugins.util.autopairs',
   -- Colors the TODO FIXME comments
   require 'plugins.util.todo-comments',
+  -- SUPERTAB
+  -- require 'plugins.util.nvim-cmp',
+
+  -- FIXME: STILL QUITE NOT CONVINCED
   require 'plugins.util.trouble',
 
   -- UI
@@ -48,8 +52,10 @@ return {
   require 'plugins.git.neogit',
 
   -- #####COLORSCHEME##### --
-  -- require 'colorscheme.tokyonight',
-  require 'colorscheme.catppuchin',
+  require 'colorscheme.tokyonight',
+  -- require 'colorscheme.catppuchin',
+
+  require 'plugins.python.venv-selector',
 }
 
 --
