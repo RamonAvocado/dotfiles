@@ -19,6 +19,7 @@ function M.setup(event)
   -- Execute a code action, usually your cursor needs to be on top of an error
   -- or a suggestion from your LSP for this to activate.
   map('gra', vim.lsp.buf.code_action, '[G]oto [C]ode [A]ction', { 'n', 'x' })
+  map('gh', vim.lsp.buf.hover, '[G]oto [H]over')
 
   -- Find references for the word under your cursor.
   map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]efe[r]ences')
