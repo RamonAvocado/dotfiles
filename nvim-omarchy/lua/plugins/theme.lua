@@ -1,1 +1,0 @@
-/home/ramonavocado/.config/omarchy/current/theme/neovim.lua
