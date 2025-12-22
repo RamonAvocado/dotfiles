@@ -1,9 +1,5 @@
 --[[
---TODO:
 
-MORE THINGS I WANT TO ADD,
-
-PYTHON DEVELOPMENT STUFF
 KNOW HOW TO USE THE AUTOFORMATTER AND THE AUTOCOMPLETER
 ADD FLASH FOR BETTER f function
 ADD SUPER TAB OR SOMETHING LIKE THAT
@@ -65,12 +61,6 @@ require('lazy').setup('plugins', { -- PLUGIN MANAGER
     },
   },
 })
-
--- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
---    This is the easiest way to modularize your config.
---
---  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
--- { import = 'custom.plugins' },
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-map = vim.keymap.set
+local map = vim.keymap.set
 ----------------------KEYMAPS OF LAZYVIM-------------------
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
@@ -14,14 +14,14 @@ map("x", "<", "<gv")
 map("x", ">", ">gv")
 
 -- quit
-map("n", "<leader>qQ", "<cmd>qa<cr>", { desc = "Quit All" })
+map("n", "<leader>qQ", "<cmd>qa<cr>", { desc = "Quit All" })     -- EXIT NEOVIM
+map('n', '<leader>qq', '<cmd>:q<CR>', { desc = 'Close window' }) -- EXIT THE CURRENT FILE
 -----------------------------------------------------------
 
 
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Exit the current file' }) -- EXIT THE CURRENT FILE
-vim.keymap.set('n', '<leader>qq', '<cmd>:q<CR>', { desc = 'Close window' })       -- EXIT THE CURRENT FILE
+-- vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Exit the current file' }) -- EXIT THE CURRENT FILE
 
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")                                      -- TO MOVE AROUND THE LINE/S YOU HAVE SELECTED
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv") -- TO MOVE AROUND THE LINE/S YOU HAVE SELECTED
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 vim.keymap.set('n', 'J', 'mzJ`z')                                           -- KEEP THE CURSOR IN PLACE WHEN YOU BRING LINE UP
@@ -32,6 +32,8 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Move up half a page' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Keep the cursor centered when searching for words' }) -- TO KEEP THE CURSOR CENTERED WHEN SEARCHING FOR WORDS
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Keep the cursor centered when searching for words' })
 
+-- Paste from system clipboard (not the Neovim buffer)
+vim.keymap.set({ 'n', 'v' }, '<leader>pp', [["+p]], { desc = 'Paste from system clipboard' })
 -- greatest remap ever
 vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Not copy things when deleting' }) -- NOT OVERRIDE THE COPY BUFFER WHEN PASTEING STUFF
 
@@ -39,8 +41,6 @@ vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Not copy things when deleti
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Copy things into system clipboard' }) -- COPY THINGS OUTSIDE NEOVIM
 vim.keymap.set('n', '<leader>Y', [["+Y]])
 
--- Paste from system clipboard (not the Neovim buffer)
-vim.keymap.set({ 'n', 'v' }, '<leader>pp', [["+p]], { desc = 'Paste from system clipboard' })
 
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]]) -- DELETE THINGS WITHOUT COPYING THEM
 
@@ -51,16 +51,16 @@ vim.keymap.set('i', 'ß', '<Esc>', { noremap = true, silent = true }) -- TO EXIT
 -- DONT KNOW WHAT THEY DO
 -- vim.keymap.set("n", "Q", "<nop>")
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set('n', '<leader>f', vim.lsp.buf.format) -- TO FORMAT THE CODE
+vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format) -- TO FORMAT THE CODE
 
 -- vim.keymap.set('n', 'grnf', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Replace all the word that im standing on' }) -- TO REPLACE ALL THE WORD NAMED THE SAME AS THE ONE IM STANDING
 vim.keymap.set('n', 'grnf', [[:.,$s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-  { desc = 'Replace word under cursor from this line downward' }) -- TO WORD NAMED THE SAME AS THE ONE IM STANDING ONWARDS
+	{ desc = 'Replace word under cursor from this line downward' }) -- TO WORD NAMED THE SAME AS THE ONE IM STANDING ONWARDS
 -- vim.keymap.set('x', 'grnf', [["sy:%s/<C-r>s/<C-r>s/gI<Left><Left><Left>]], { desc = 'Replace all occurrences of selected text' })
 vim.keymap.set('x', 'grnf', [["sy:'<,$s/<C-r>s/<C-r>s/gI<Left><Left><Left>]],
-  { desc = 'Replace selected text from selection start line downward' })
+	{ desc = 'Replace selected text from selection start line downward' })
 
-vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true, desc = 'Makes the current file executable' }) -- TO MAKE SCRIPS EXECUTABLE
+vim.keymap.set('n', '<leader>fx', '<cmd>!chmod +x %<CR>', { silent = true, desc = 'Makes the current file executable' }) -- TO MAKE SCRIPS EXECUTABLE
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
