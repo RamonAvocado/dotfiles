@@ -24,8 +24,8 @@ return {
 	require 'plugins.lsp.lazydev',
 	require 'plugins.lsp.lsp-config',
 
-	require 'plugins.conform',
-	require 'plugins.blink',
+	require 'plugins.linter.conform',
+	require 'plugins.linter.blink',
 
 	-- Automatically adjust the indent size to much the same as the file
 	-- require 'plugins.indent-line',
