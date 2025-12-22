@@ -1,57 +1,60 @@
 -- LOT OF QUALITY OF LIFE ADDONS
 return {
-  'folke/snacks.nvim',
-  priority = 1000,
-  lazy = false,
-  ---@type snacks.Config
-  opts = {
-    bigfile = { enabled = true },
-    dashboard = { enabled = true },
-    explorer = { enabled = false }, --EXPLORER OR NEO-TREE
-    indent = { enabled = true }, --HIGHLIGHTS IN WHICH INDENT TAB ARE YOU RIGHT NOW
-    input = { enabled = false },
-    picker = { enabled = false }, -- PENSARME SI USAR ESTE PICKER O EL DE SIEMPRE
-    notifier = { enabled = true },
-    quickfile = { enabled = true },
-    scope = { enabled = false },
-    scroll = { enabled = true },
-    statuscolumn = { enabled = true },
-    words = { enabled = true },
-    terminal = require 'plugins.snacks.terminal',
-  },
-  keys = vim.list_extend(require 'config.keymaps.snacks.terminal', {}),
-
-  --     {
-  --       '<leader>:',
-  --       function()
-  --         Snacks.picker.command_history()
-  --       end,
-  --       desc = 'Command History',
-  --     },
-  --     {
-  --       '<leader>e',
-  --       function()
-  --         Snacks.explorer()
-  --       end,
-  --       desc = 'File Explorer',
-  --     },
-  --     PERF: QUE COJONES ES PICKER
-  --     TODO: GOOD IDEA BUT BETTER IF TELESCOPE
-  --     {
-  --       '<leader>fp',
-  --       function()
-  --         Snacks.picker.projects()
-  --       end,
-  --       desc = 'Projects',
-  --     },
-  --     {
-  --       '<leader>fr',
-  --       function()
-  --         Snacks.picker.recent()
-  --       end,
-  --       desc = 'Recent',
-  --     },
+	'folke/snacks.nvim',
+	priority = 1000,
+	lazy = false,
+	---@type snacks.Config
+	opts = {
+		bigfile = { enabled = true },
+		bufdelete = { enabled = true },
+		dashboard = { enabled = true },
+		explorer = { enabled = false }, --EXPLORER OR NEO-TREE
+		indent = { enabled = true }, --HIGHLIGHTS IN WHICH INDENT TAB ARE YOU RIGHT NOW
+		input = { enabled = false },
+		picker = { enabled = false }, -- PENSARME SI USAR ESTE PICKER O EL DE SIEMPRE
+		notifier = { enabled = true },
+		quickfile = { enabled = true },
+		scope = { enabled = false },
+		scroll = { enabled = true },
+		statuscolumn = { enabled = true },
+		words = { enabled = true },
+		terminal = require 'plugins.snacks.terminal',
+	},
+	keys = vim.list_extend(require 'config.keymaps.snacks.terminal', {}),
 }
+
+--     {
+--       '<leader>:',
+--       function()
+--         Snacks.picker.command_history()
+--       end,
+--       desc = 'Command History',
+--     },
+--     {
+--       '<leader>e',
+--       function()
+--         Snacks.explorer()
+--       end,
+--       desc = 'File Explorer',
+--     },
+--     PERF: QUE COJONES ES PICKER
+--     TODO: GOOD IDEA BUT BETTER IF TELESCOPE
+--     {
+--       '<leader>fp',
+--       function()
+--         Snacks.picker.projects()
+--       end,
+--       desc = 'Projects',
+--     },
+--     {
+--       '<leader>fr',
+--       function()
+--         Snacks.picker.recent()
+--       end,
+--       desc = 'Recent',
+--     },
+
+
 -- return {
 --   'folke/snacks.nvim',
 --   priority = 1000,
