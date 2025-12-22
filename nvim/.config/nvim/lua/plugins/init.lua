@@ -29,12 +29,13 @@ return {
 
 	-- Automatically adjust the indent size to much the same as the file
 	-- require 'plugins.indent-line',
+	-- PERF: MINI-NVIM ECOSYSTEM
+	require 'plugins.mini',
 
 	-- UTIL
 	-- A combination of small plugins for various things keybind related
 	-- require 'plugins.util.mini-vim',
 	-- Automatically adds the other pair, for example (, [, ", {
-	require 'plugins.util.autopairs',
 	-- Colors the TODO FIXME comments
 	require 'plugins.util.todo-comments',
 	-- SUPERTAB
