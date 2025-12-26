@@ -3,7 +3,8 @@ return {
 	-- Detect tabstop and shiftwidth automatically
 	'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
-	require 'plugins.edgy',
+	-- TODO: FOR NOW I DONT HAVE EDGY ENABLED
+	-- require 'plugins.edgy',
 	require 'plugins.harpoon',
 	-- Pop up that tells which key combinations is needed to do something
 	require 'plugins.which-key',
@@ -12,6 +13,10 @@ return {
 	require 'plugins.telescope.telescope',
 
 	require 'plugins.treesitter.treesitter',
+
+
+	-- TODO: TMUX
+	require 'plugins.tmux',
 
 	--FILE EXPLORER
 	require 'plugins.neo-tree',
