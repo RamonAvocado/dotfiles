@@ -8,7 +8,7 @@ return {
 		bigfile = { enabled = true },
 		bufdelete = { enabled = true },
 		dashboard = { enabled = true },
-		explorer = { enabled = false }, --EXPLORER OR NEO-TREE
+		explorer = require 'plugins.snacks.explorer',
 		indent = { enabled = true }, --HIGHLIGHTS IN WHICH INDENT TAB ARE YOU RIGHT NOW
 		input = { enabled = false },
 		picker = { enabled = false }, -- PENSARME SI USAR ESTE PICKER O EL DE SIEMPRE
