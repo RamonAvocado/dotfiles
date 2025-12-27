@@ -1,4 +1,10 @@
 -- LOT OF QUALITY OF LIFE ADDONS
+
+local function load_dashboard()
+	local dashboard = require("plugins.snacks.dashboard")
+	return vim.tbl_extend("force", dashboard.init(), dashboard.opts())
+end
+
 return {
 	'folke/snacks.nvim',
 	priority = 1000,
@@ -7,7 +13,7 @@ return {
 	opts = {
 		bigfile = { enabled = true },
 		bufdelete = { enabled = true },
-		dashboard = { enabled = true },
+		dashboard = load_dashboard(),
 		explorer = require 'plugins.snacks.explorer',
 		indent = { enabled = true }, --HIGHLIGHTS IN WHICH INDENT TAB ARE YOU RIGHT NOW
 		input = { enabled = false },
@@ -18,7 +24,7 @@ return {
 		scroll = { enabled = true },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
-		terminal = require 'plugins.snacks.terminal',
+		terminal = require 'plugins.snacks.terminal', -- WARN: DISABLED FOR NOW
 	},
 	keys = vim.list_extend(require 'config.keymaps.snacks.terminal', {}),
 }

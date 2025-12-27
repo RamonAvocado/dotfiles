@@ -13,8 +13,11 @@ return {
 		-- better deal with markdown code blocks
 		markdown = true,
 	},
+	-- config = function(_, opts)
+	-- 	-- FIXME: NOW I HAVE TO SOLVE THIS LAZYVIM
+	-- 	LazyVim.mini.pairs(opts)
+	-- end
 	config = function(_, opts)
-		-- FIXME: NOW I HAVE TO SOLVE THIS LAZYVIM
-		LazyVim.mini.pairs(opts)
+		require("mini.pairs").setup(opts)
 	end,
 }

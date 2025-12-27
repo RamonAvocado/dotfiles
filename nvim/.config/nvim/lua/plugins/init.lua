@@ -5,6 +5,7 @@ return {
 
 	-- TODO: FOR NOW I DONT HAVE EDGY ENABLED
 	-- require 'plugins.edgy',
+
 	require 'plugins.harpoon',
 	-- Pop up that tells which key combinations is needed to do something
 	require 'plugins.which-key',
@@ -14,21 +15,18 @@ return {
 
 	require 'plugins.treesitter.treesitter',
 
-
 	-- TODO: TMUX
 	require 'plugins.tmux',
 
-	--FILE EXPLORER
-	require 'plugins.neo-tree',
 	-- LOT OF QOL
 	require 'plugins.snacks.snacks',
-	require "plugins.snacks.dashboard",
 
 	-- LSP --
 	-- Specific plugin for Plugin development
 	require 'plugins.lsp.lazydev',
 	require 'plugins.lsp.lsp-config',
 
+	-- LINTING
 	require 'plugins.linter.conform',
 	require 'plugins.linter.blink',
 
@@ -70,4 +68,3 @@ return {
 --
 -- require 'kickstart.plugins.debug',
 -- require 'kickstart.plugins.lint',
--- require 'kickstart.plugins.neo-tree',

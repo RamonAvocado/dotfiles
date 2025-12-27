@@ -1,4 +1,4 @@
 return {
-  enabled = true,
-  require('config.keymaps.snacks.terminal').setup(),
+	enabled = false,
+	require('config.keymaps.snacks.terminal').setup(),
 }
