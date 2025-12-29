@@ -83,14 +83,15 @@ return {
 						return require("which-key.extras").expand.buf()
 					end,
 				},
-				{
-					"<leader>w",
-					group = "windows",
-					proxy = "<c-w>",
-					expand = function()
-						return require("which-key.extras").expand.win()
-					end,
-				},
+				-- WARN: FOR NOW DISABLED
+				-- {
+				-- 	"<leader>w",
+				-- 	group = "windows",
+				-- 	proxy = "<c-w>",
+				-- 	expand = function()
+				-- 		return require("which-key.extras").expand.win()
+				-- 	end,
+				-- },
 				-- better descriptions
 				{ "gx", desc = "Open with system app" },
 			},
