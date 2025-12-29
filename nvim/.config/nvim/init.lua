@@ -14,29 +14,21 @@ NOTE: KEEP SEEING THE TMUX PLUGINS
 NOTE: KEEP COMPARING WITH THE OFICIAL LAZYVIM CONFIG
 
 KNOW HOW TO USE THE AUTOFORMATTER AND THE AUTOCOMPLETER
-ADD FLASH FOR BETTER f function
 
 IMPROVE UI
 
-THINK FOR OTHER TERMINAL, MORE MODERN ALTERNATIVES-
-  MAYBE EDGY-NVIM IS GOOD
   OR MAYBE WITH SNACKS I CAN USE THAT
   SNACKS HAS OTHER FILE EXPLORER FROM FOKE
 
-
-
 'stevearc/conform.nvim', - AUTOFORMATO
 'saghen/blink.cmp', - AUTOCOMPLETADO
-
-'nvim-treesitter/nvim-treesitter', - TREESITTER
 --]]
 
 require 'config.keymaps'
 require 'config.options'
 require 'config.autocmd'
 
--- [[ Install `lazy.nvim` plugin manager ]]
--- Open the plugin manager [:Lazy]
+-- [[ Install `lazy.nvim` plugin manager (:Lazy)]]
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'

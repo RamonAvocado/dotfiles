@@ -52,11 +52,15 @@ return {
 	-- require "plugins.ui.lualine",
 	require 'plugins.ui.noice',
 
-	-- GIT
+	-- GIT --
 	-- require 'plugins.git.diffview', -- With super + gc open the merge screen
 	-- GIT SIGNS HAS SOMETHING ABOUT DIFF TOO, WHEN THE PROBLEM OCURR COMPARE DIFFVIEW AND GITSIGN
 	require 'plugins.git.gitsigns',
 	require 'plugins.git.neogit',
+
+	-- DOCKER --
+	require "plugins.docker.lazy-docker",
+
 
 	-- #####COLORSCHEME##### --
 	require 'colorscheme.tokyonight',
