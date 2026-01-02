@@ -1,12 +1,13 @@
 local M = {}
 
 function M.setup() end
+
 -- See `:help telescope.builtin`
 local builtin = require 'telescope.builtin'
 local map = vim.keymap.set
 
 local search_neovim_config = function()
-  builtin.find_files { cwd = vim.fn.stdpath 'config' }
+	builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end
 
 -- WARNING: HEL STUFF
@@ -16,25 +17,16 @@ map('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 map('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
 -- SEARCHING IN NEOVIM CONFIG
 map('n', '<leader>snv', function()
-  builtin.find_files { cwd = vim.fn.stdpath 'config' }
+	builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eo[V]im files' })
 --
 -- -- TO SEARCH ALL THE TELESCOPE FUNCTIONALITIES
 map('n', '<leader>sst', builtin.builtin, { desc = '[S]earch [S]elect [T]elescope' })
 
--- SEARCH CURRENT WORD
 map('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-
--- SEARCH BY GREP IN THE PROYECT
 map('n', '<leader>s<leader>', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-
--- SEARCH IN THE DIAGNOSTICS
 map('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 
--- DONT KNOW WHAT THIS DOES
--- map('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
---
--- SEARCHING IN THE RECENT OPEN FILES
 -- TODO: Maybe only search in the harpoon files
 map('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 
@@ -46,25 +38,24 @@ map('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffer
 -- TODO: CHANGE THIS TO ONLY SEARCH IN THE CURRENT GIT PROYECT
 map('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
 map('n', '<leader>/', function()
-  builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
+	builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+		winblend = 10,
+		previewer = false,
+	})
 end, { desc = '[/] Fuzzily search in current file' })
 
 map('n', '<leader>s/', function()
-  builtin.live_grep {
-    grep_open_files = true,
-    prompt_title = 'Live Grep in Open Files',
-  }
+	builtin.live_grep {
+		grep_open_files = true,
+		prompt_title = 'Live Grep in Open Files',
+	}
 end, { desc = '[S]earch [/] in Open Files' }) -- See `:help telescope.builtin.live_grep()`
 
 -- WARNING: GIT STUFF
---
-map('n', '<leader>sgs', builtin.git_status, { desc = 'Telescope: [G]it status' })
-map('n', '<leader>sgS', builtin.git_stash, { desc = 'Telescope: [G]it stash' })
-map('n', '<leader>sgc', builtin.git_commits, { desc = 'Telescope: [G]it commits' })
-map('n', '<leader>sgb', builtin.git_branches, { desc = 'Telescope: [G]it branches' })
+map('n', '<leader>sGs', builtin.git_status, { desc = 'Telescope: [G]it status' })
+map('n', '<leader>sGS', builtin.git_stash, { desc = 'Telescope: [G]it stash' })
+map('n', '<leader>sGc', builtin.git_commits, { desc = 'Telescope: [G]it commits' })
+map('n', '<leader>sGb', builtin.git_branches, { desc = 'Telescope: [G]it branches' })
 
 --
 -- local function smart_files()
@@ -82,13 +73,6 @@ map('n', '<leader>sgb', builtin.git_branches, { desc = 'Telescope: [G]it branche
 -- map('n', '<leader>fo', builtin.oldfiles, { desc = 'Telescope: Old files' })
 -- map('n', '<leader>fc', builtin.commands, { desc = 'Telescope: Commands' })
 -- map('n', '<leader>fk', builtin.keymaps, { desc = 'Telescope: Keymaps' })
---
---
--- -- [G]it
--- map('n', '<leader>gs', builtin.git_status, { desc = 'Telescope: [G]it status' })
--- map('n', '<leader>gc', builtin.git_commits, { desc = 'Telescope: [G]it commits' })
--- map('n', '<leader>gb', builtin.git_branches, { desc = 'Telescope: [G]it branches' })
---
 --
 -- -- LSP
 -- map('n', '<leader>ld', builtin.lsp_definitions, { desc = 'Telescope (LSP): Definitions' })

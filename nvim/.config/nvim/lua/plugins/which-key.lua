@@ -52,30 +52,39 @@ return {
 		--   { '<leader>sg', group = '[S]earch [G]it',    mode = { 'n', 'v' } },
 		--   { '<leader>o',  group = '[O]pen' },
 		--   { 'go',         group = 'LSP [O]pen Symbols' },
-		--   { 'gr',         group = 'LSP Utilities' },
 		-- },
 		spec = {
 			{
 				mode = { "n", "x" },
-				{ "<leader><tab>", group = "tabs" },
-				{ "<leader>c",     group = "code" },
-				{ "<leader>o",     group = "open" },
-				{ "<leader>d",     group = "debug" },
-				{ "<leader>t",     group = "terminal/tmux" },
-				{ "<leader>dp",    group = "profiler" },
-				{ "<leader>f",     group = "file/find" },
-				{ "<leader>g",     group = "git" },
-				{ "<leader>gh",    group = "hunks" },
-				{ "<leader>q",     group = "quit/session" },
-				{ "<leader>s",     group = "search" },
-				{ "<leader>u",     group = "ui" },
-				{ "<leader>x",     group = "diagnostics/quickfix" },
-				{ "[",             group = "prev" },
-				{ "]",             group = "next" },
-				{ "g",             group = "goto" },
-				{ "go",            group = "open-symbols" },
-				{ "gs",            group = "surround" },
-				{ "z",             group = "fold" },
+				-- { "<leader><tab>", group = "tabs" },
+				{ "<leader>c",  group = "code" },
+				{ "<leader>o",  group = "open" },
+				-- { "<leader>d",     group = "debug" }, TODO: ADD DEBUG STUFF
+				-- { "<leader>dp", group = "profiler" },
+				{ "<leader>t",  group = "terminal/tmux" },
+				{ "<leader>f",  group = "file/find" },
+				-- UTILITIES
+				{ "<leader>g",  group = "goto UIs" },
+				{ "<leader>gh", group = "hunks" },
+				{ "<leader>q",  group = "quit/session" },
+
+				-- SEARCH
+				{ "<leader>s",  group = "search" },
+				{ "<leader>sn", group = "neovim" },
+				{ "<leader>sG", group = "git" },
+				{ "<leader>u",  group = "ui" },
+				{ "<leader>x",  group = "diagnostics/quickfix" },
+
+				-- NAVIGATION
+				{ "[",          group = "prev" },
+				{ "]",          group = "next" },
+
+				-- LSP
+				{ "g",          group = "goto" },
+				{ "go",         group = "open-symbols" },
+				{ 'gr',         group = 'LSP Utilities' },
+				{ "gs",         group = "surround" },
+				{ "z",          group = "fold" },
 				{
 					"<leader>b",
 					group = "buffer",
