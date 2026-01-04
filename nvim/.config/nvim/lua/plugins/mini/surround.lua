@@ -1,4 +1,3 @@
--- FIXME: ITS NOT
 return {
 	"nvim-mini/mini.surround",
 	-- keys = function(_, keys)
