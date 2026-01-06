@@ -7,13 +7,6 @@ local M = {
     end,
     desc = 'Toggle Terminal',
   },
-  -- {
-  --   '<leader>tf',
-  --   function()
-  --     require('snacks').terminal { float = true }
-  --   end,
-  --   desc = 'Terminal: Float',
-  -- },
 }
 
 function M.setup()

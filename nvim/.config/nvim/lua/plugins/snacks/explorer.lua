@@ -1,5 +1,20 @@
-return {
-	enabled = true,
-	-- FIXME: OVERRIDE ALL THE DEFAULT COMMANDS, I DONT NEED MOST
-	require('config.keymaps.snacks.explorer').setup(),
-}
+local M = {}
+
+function M.init()
+  return { enabled = true }
+end
+
+function M.opts()
+  return {
+    explorer = {
+      replace_netrw = true,
+    },
+    picker = {
+      hidden = true,
+      ignored = true,
+    },
+  }
+end
+
+return M
+

@@ -1,34 +1,49 @@
 -- LOT OF QUALITY OF LIFE ADDONS
 
 local function load_dashboard()
-	local dashboard = require("plugins.snacks.dashboard")
-	return vim.tbl_extend("force", dashboard.init(), dashboard.opts())
+  local dashboard = require 'plugins.snacks.dashboard'
+  return vim.tbl_extend('force', dashboard.init(), dashboard.opts())
+end
+
+local function load_explorer()
+  local explorer = require 'plugins.snacks.explorer'
+  return vim.tbl_extend('force', explorer.init(), explorer.opts())
+end
+-- vim.print(load_explorer())
+
+local function load_keys()
+  local keys = {}
+  -- vim.list_extend(keys, require 'config.keymaps.snacks.terminal')
+  vim.list_extend(keys, require 'config.keymaps.snacks.explorer')
+
+  return keys
 end
 
 return {
-	'folke/snacks.nvim',
-	priority = 1000,
-	lazy = false,
-	---@type snacks.Config
-	opts = {
-		bigfile = { enabled = true },   -- A better way to deal with big files
-		bufdelete = { enabled = true }, -- Lets you delete buffers without disrupting window layout
-		dashboard = load_dashboard(),   -- What shows up when opening nvim
-		explorer = require 'plugins.snacks.explorer', -- A file explorer
-		indent = { enabled = true },    -- Indent guides and scopes
-		input = { enabled = false },    -- Better vim.ui.input
-		picker = { enabled = false },   -- PENSARME SI USAR ESTE PICKER O EL DE SIEMPRE
-		notifier = { enabled = true },  -- Pretty vim.notify FIX: NOICE IS FOR THAT NO?
-		quickfile = { enabled = true }, -- When entering a file with nvim file_name, it will load as quick as posible
-		scope = { enabled = false },    -- Scope detection text objects and jumping based on treesitter or indent
-		scroll = { enabled = true },    -- Smooth scrolling
-		statuscolumn = { enabled = true }, -- Pretty status column
-		words = { enabled = true },     -- Auto show LSP  references and quickly navigate between them
-		terminal = require 'plugins.snacks.terminal', -- WARN: DISABLED FOR NOW
-	},
-	keys = vim.list_extend(require 'config.keymaps.snacks.terminal', {}),
+  'folke/snacks.nvim',
+  priority = 1000,
+  lazy = false,
+  ---@type snacks.Config
+  opts = {
+    bigfile = { enabled = true }, -- A better way to deal with big files
+    bufdelete = { enabled = true }, -- Lets you delete buffers without disrupting window layout
+    dashboard = load_dashboard(), -- What shows up when opening nvim
+    -- explorer = load_explorer(), -- A file explorer
+    explorer = { enabled = true }, -- FIXME: Remove and solve the other
+    indent = { enabled = true }, -- Indent guides and scopes
+    input = { enabled = false }, -- Better vim.ui.input
+    picker = { enabled = false }, -- PENSARME SI USAR ESTE PICKER O EL DE SIEMPRE
+    notifier = { enabled = true }, -- Pretty vim.notify FIX: NOICE IS FOR THAT NO?
+    quickfile = { enabled = true }, -- When entering a file with nvim file_name, it will load as quick as posible
+    scope = { enabled = false }, -- Scope detection text objects and jumping based on treesitter or indent
+    scroll = { enabled = true }, -- Smooth scrolling
+    statuscolumn = { enabled = true }, -- Pretty status column
+    words = { enabled = true }, -- Auto show LSP  references and quickly navigate between them
+    terminal = require 'plugins.snacks.terminal', -- WARN: DISABLED FOR NOW
+  },
+  keys = load_keys(),
 }
-
+--
 --     {
 --       '<leader>:',
 --       function()
@@ -59,7 +74,6 @@ return {
 --       end,
 --       desc = 'Recent',
 --     },
-
 
 -- return {
 --   'folke/snacks.nvim',
