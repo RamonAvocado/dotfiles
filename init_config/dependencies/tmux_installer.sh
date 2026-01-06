@@ -4,6 +4,9 @@ distro=${1:-arch}
 
 if [[ $distro == "arch" ]]; then
 	sudo pacman -S tmux
+elif [[ $distro == "debian" ]]; then
+	sudo apt update
+	yes | sudo apt install tmux
 else
 	echo $distro
 fi
