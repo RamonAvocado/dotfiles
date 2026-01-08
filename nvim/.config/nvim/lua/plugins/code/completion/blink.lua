@@ -40,9 +40,6 @@ return {
 			--   <c-y> to accept ([y]es) the completion.
 			--    This will auto-import if your LSP supports it.
 			--    This will expand snippets if the LSP sent a snippet.
-			-- 'super-tab' for tab to accept
-			-- 'enter' for enter to accept
-			-- 'none' for no mappings
 			--
 			-- For an understanding of why the 'default' preset is recommended,
 			-- you will need to read `:help ins-completion`
