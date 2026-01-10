@@ -5,13 +5,7 @@ function M.setup(event)
     mode = mode or 'n'
     vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
   end
-
-  map('<leader>ccc', "<cmd>:lua print('ha') <CR>", '[L]ist [C]apabilities', 'n')
-  -- map(
-  --   '<leader>cL',
-  --   "<cmd>:lua for _,c in ipairs(vim.lsp.get_clients({bufnr=0})) do print(c.name); print(vim.inspect(c.server_capabilities)); print('---') end<CR>",
-  --   '[L]ist [C]apabilities'
-  -- )
+	
   -- Rename the variable under your cursor.
   --  Most Language Servers support renaming across files, etc.
   map('grnn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -27,7 +21,7 @@ function M.setup(event)
   -- Jump to the implementation of the word under your cursor.
   --  Useful when your language has ways of declaring types without an actual implementation.
   map('gri', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-	
+
   -- Jump to the type of the word under your cursor.
   --  Useful when you're not sure what type a variable is and you want to see
   --  the definition of its *type*, not where it was *defined*.
@@ -46,7 +40,6 @@ function M.setup(event)
   -- Fuzzy find all the symbols in your current workspace.
   --  Similar to document symbols, except searches over your entire project.
   map('gow', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[O]pen [W]orkspace Symbols')
-
 end
 
 return M
