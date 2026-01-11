@@ -1,20 +1,16 @@
 local M = {}
 
-function M.init()
-  return { enabled = true }
+function M.explorer()
+  return {
+    replace_netrw = true,
+  }
 end
 
-function M.opts()
+function M.picker()
   return {
-    explorer = {
-      replace_netrw = true,
-    },
-    picker = {
-      hidden = true,
-      ignored = true,
-    },
+    hidden = true,
+    ignored = true,
   }
 end
 
 return M
-
