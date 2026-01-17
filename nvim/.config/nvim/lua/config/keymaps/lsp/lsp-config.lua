@@ -5,7 +5,7 @@ function M.setup(event)
     mode = mode or 'n'
     vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
   end
-	
+
   -- Rename the variable under your cursor.
   --  Most Language Servers support renaming across files, etc.
   map('grnn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -40,6 +40,8 @@ function M.setup(event)
   -- Fuzzy find all the symbols in your current workspace.
   --  Similar to document symbols, except searches over your entire project.
   map('gow', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[O]pen [W]orkspace Symbols')
+
+  map('<leader>lr', ':LspRestart<CR>', '[L]sp [Restart]')
 end
 
 return M
