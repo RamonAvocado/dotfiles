@@ -13,4 +13,5 @@ return {
   -- require 'plugins.code.completion.nvim-cmp',
 
   require 'plugins.code.treesitter.treesitter',
+  -- require 'plugins.code.treesitter.treesitter-new',
 }

@@ -30,6 +30,7 @@ return {
 	require 'plugins.util.todo-comments',
 	-- FIXME: STILL QUITE NOT CONVINCED
 	require 'plugins.util.trouble',
+	require "plugins.util.markdown-preview",
 
 	-- UI
 	require "plugins.ui.bufferline",
