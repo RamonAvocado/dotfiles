@@ -72,7 +72,7 @@ return {
 				{ "<leader>s",  group = "search" },
 				{ "<leader>sn", group = "neovim" },
 				{ "<leader>sG", group = "git" },
-				{ "<leader>u",  group = "ui" },
+				-- { "<leader>u",  group = "ui" },
 				{ "<leader>x",  group = "diagnostics/quickfix" },
 
 				-- NAVIGATION

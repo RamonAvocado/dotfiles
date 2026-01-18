@@ -8,6 +8,7 @@ local function load_keys()
   local keys = {}
   -- vim.list_extend(keys, require 'config.keymaps.snacks.terminal')
   vim.list_extend(keys, require 'config.keymaps.snacks.explorer')
+  vim.list_extend(keys, require 'config.keymaps.snacks.zen')
   return keys
 end
 
@@ -27,6 +28,16 @@ local function load_opts()
     statuscolumn = { enabled = true }, -- Pretty status column
     words = { enabled = true }, -- Auto show LSP  references and quickly navigate between them
     terminal = require 'plugins.snacks.terminal', -- WARN: DISABLED FOR NOW
+    zen = {
+      enabled = true,
+      toggles = {
+        dim = true,
+        git_signs = false,
+        mini_diff_signs = false,
+        diagnostics = false,
+        inlay_hints = false,
+      },
+    },
   }
 end
 
