@@ -6,7 +6,6 @@ end
 
 local function load_keys()
   local keys = {}
-  -- vim.list_extend(keys, require 'config.keymaps.snacks.terminal')
   vim.list_extend(keys, require 'config.keymaps.snacks.explorer')
   vim.list_extend(keys, require 'config.keymaps.snacks.zen')
   return keys
@@ -27,7 +26,7 @@ local function load_opts()
     scroll = { enabled = true }, -- Smooth scrolling
     statuscolumn = { enabled = true }, -- Pretty status column
     words = { enabled = true }, -- Auto show LSP  references and quickly navigate between them
-    terminal = require 'plugins.snacks.terminal', -- WARN: DISABLED FOR NOW
+    terminal = { enabled = false }, -- WARN: DISABLED FOR NOW
     zen = {
       enabled = true,
       toggles = {
@@ -62,7 +61,7 @@ return {
     scroll = { enabled = true }, -- Smooth scrolling
     statuscolumn = { enabled = true }, -- Pretty status column
     words = { enabled = true }, -- Auto show LSP  references and quickly navigate between them
-    terminal = require 'plugins.snacks.terminal', -- WARN: DISABLED FOR NOW
+    terminal = {enabled = false}, -- WARN: DISABLED FOR NOW
   },
   keys = load_keys(),
 }

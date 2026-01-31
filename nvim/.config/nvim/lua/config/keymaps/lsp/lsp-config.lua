@@ -15,6 +15,7 @@ function M.setup(event)
   map('gra', vim.lsp.buf.code_action, '[G]oto [C]ode [A]ction', { 'n', 'x' })
   map('grh', vim.lsp.buf.hover, '[G]oto [H]over') -- "K"
 
+  map('grR', ':LspRestart<CR>', '[L]sp [R]estart')
   -- Find references for the word under your cursor.
   map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]efe[r]ences')
 
@@ -41,7 +42,6 @@ function M.setup(event)
   --  Similar to document symbols, except searches over your entire project.
   map('gow', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[O]pen [W]orkspace Symbols')
 
-  map('<leader>lr', ':LspRestart<CR>', '[L]sp [Restart]')
 end
 
 return M

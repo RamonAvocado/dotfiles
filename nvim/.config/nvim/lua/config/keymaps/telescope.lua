@@ -7,7 +7,7 @@ local builtin = require 'telescope.builtin'
 local map = vim.keymap.set
 
 local search_neovim_config = function()
-	builtin.find_files { cwd = vim.fn.stdpath 'config' }
+  builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end
 
 -- WARNING: HEL STUFF
@@ -17,7 +17,7 @@ map('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 map('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
 -- SEARCHING IN NEOVIM CONFIG
 map('n', '<leader>snv', function()
-	builtin.find_files { cwd = vim.fn.stdpath 'config' }
+  builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eo[V]im files' })
 --
 -- -- TO SEARCH ALL THE TELESCOPE FUNCTIONALITIES
@@ -38,17 +38,17 @@ map('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffer
 -- TODO: CHANGE THIS TO ONLY SEARCH IN THE CURRENT GIT PROYECT
 map('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
 map('n', '<leader>/', function()
-	builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-		winblend = 10,
-		previewer = false,
-	})
+  builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
 end, { desc = '[/] Fuzzily search in current file' })
 
 map('n', '<leader>s/', function()
-	builtin.live_grep {
-		grep_open_files = true,
-		prompt_title = 'Live Grep in Open Files',
-	}
+  builtin.live_grep {
+    grep_open_files = true,
+    prompt_title = 'Live Grep in Open Files',
+  }
 end, { desc = '[S]earch [/] in Open Files' }) -- See `:help telescope.builtin.live_grep()`
 
 -- WARNING: GIT STUFF
