@@ -38,6 +38,11 @@ return {
           'docker_compose_language_service', -- LSP Docker Compose
           'dockerls', -- LSP Dockerfile
           'hadolint', -- LINTER
+
+          -- HTML
+          'html-lsp',
+          'htmx-lsp',
+          'htmlhint',
         },
       }
     end,

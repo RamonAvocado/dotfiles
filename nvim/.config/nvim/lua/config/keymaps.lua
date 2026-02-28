@@ -13,6 +13,9 @@ map({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = tru
 map('x', '<', '<gv')
 map('x', '>', '>gv')
 
+map('i', '<M-1>', '<')
+map('i', '<M-2>', '>')
+
 -- quit
 map('n', '<leader>qQ', '<cmd>qa<cr>', { desc = 'Quit All' }) -- EXIT NEOVIM
 map('n', '<leader>qq', '<cmd>:q<CR>', { desc = 'Close window' }) -- EXIT THE CURRENT FILE
