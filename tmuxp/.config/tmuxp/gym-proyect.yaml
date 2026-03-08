@@ -1,0 +1,20 @@
+session_name: main
+start_directory: ~/repos/gym-project/
+
+windows:
+  - window_name: editor
+    panes:
+      - nvim .
+
+  - window_name: server
+    # layout: even-vertical
+    layout: even-horizontal
+    panes:
+      - null
+      - null
+      - null
+
+  - window_name: random
+    panes:
+      - null
+      - null
