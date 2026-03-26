@@ -12,6 +12,8 @@ return {
       markdown = { 'prettierd' },
       json = { 'prettierd' },
       yaml = { 'prettierd' },
+      html = { 'prettierd' },
+      javascript = { 'prettierd' },
     },
   },
 }

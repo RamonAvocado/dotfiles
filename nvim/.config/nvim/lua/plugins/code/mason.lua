@@ -31,8 +31,11 @@ return {
           'bashls', -- LSP
           'shellharden', -- LINTER and FORMATTER
 
-          -- Markdown, Json, Yaml
+          -- Markdown, Json, Yaml, HTML, JavaScript
           'prettierd', -- FORMATTER
+
+          -- JavaScript, TypeScript
+          'oxling',
 
           -- Docker
           'docker_compose_language_service', -- LSP Docker Compose
