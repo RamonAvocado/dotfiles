@@ -4,8 +4,6 @@
 alias gs="git status"
 alias gcm="git commit -m"
 
-# Docker #
-alias d="docker"
-
-
+# SSH #
+alias eval-ssh='eval "$(ssh-agent -s)"; ssh-add ~/.ssh/github/id_ed25519'
 
