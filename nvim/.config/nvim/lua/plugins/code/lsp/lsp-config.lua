@@ -1,10 +1,3 @@
--- If you're wondering about lsp vs treesitter, you can check out the wonderfully
--- and elegantly composed help section, `:help lsp-vs-treesitter`
-
---  This function gets run when an LSP attaches to a particular buffer.
---    That is to say, every time a new file is opened that is associated with
---    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
---    function will be executed to configure the current buffer
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
@@ -42,6 +35,8 @@ return {
     }
     local original_capabilities = vim.lsp.protocol.make_client_capabilities()
     local capabilities = require('blink.cmp').get_lsp_capabilities(original_capabilities)
+
+    -- NOTE: REMEMBER TO ADD HERE THE SERVER TO
     local servers = {
       -- Lua
       lua_ls = {
@@ -67,8 +62,16 @@ return {
       bashls = {},
 
       -- Docker
-      docker_language_server = {},
-      docker_compose_language_server = {},
+      dockerls = {},
+      docker_compose_language_service = {},
+
+      -- html
+      html = {},
+      htmx = {},
+
+      -- JavaScript
+      ts_ls = {},
+      oxlint = {},
     }
     -- `mason` had to be setup earlier: to configure its options see the
     -- `dependencies` table for `nvim-lspconfig` above.

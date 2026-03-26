@@ -21,6 +21,7 @@ return {
         'vimdoc',
         'python',
         'dockerfile',
+        'javascript',
       },
       auto_install = true,
       highlight = { enable = true },

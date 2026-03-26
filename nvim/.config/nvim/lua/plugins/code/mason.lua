@@ -35,7 +35,8 @@ return {
           'prettierd', -- FORMATTER
 
           -- JavaScript, TypeScript
-          'oxling',
+          'oxlint', -- LINTER and LSP
+          'ts_ls', -- LSP
 
           -- Docker
           'docker_compose_language_service', -- LSP Docker Compose
