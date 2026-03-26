@@ -1,0 +1,21 @@
+session_name: main
+start_directory: ~/repos/Stock/
+
+windows:
+  - window_name: editor
+    # start_directory: ruta/opcional
+    # layout: even-horizontal (opcional)
+    panes:
+      - nvim .
+
+  - window_name: server
+    # layout: even-vertical
+    layout: even-horizontal
+    panes:
+      - null
+      - null
+
+  # - window_name: random
+  #   panes:
+  #     - null
+  #     - null
