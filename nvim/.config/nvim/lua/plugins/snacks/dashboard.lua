@@ -1,26 +1,43 @@
+function get_random_image(route)
+  local files = {}
+  local process = io.popen('ls "' .. route .. '"')
+
+  if process == nil then
+    return
+  end
+
+  for file in process:lines() do
+    table.insert(files, file)
+  end
+
+  math.randomseed(os.time())
+  local index = math.random(1, #files)
+  return files[index]
+end
 local M = {}
 
 function M.init()
-	return { enabled = true }
+  return { enabled = true }
 end
 
 function M.opts()
-	return {
-		sections = {
-			{
-				section = "terminal",
-				cmd =
-				"chafa ~/Downloads/download1.jpeg --format symbols --symbols vhalf --stretch; sleep .1",
-				height = 17,
-				padding = 1,
-			},
-			{
-				pane = 2,
-				{ section = "keys",   gap = 1, padding = 1 },
-				{ section = "startup" },
-			},
-		},
-	}
+  local route = '$HOME/.config/wallpapers/nvim/'
+  local terminal_image = get_random_image(route)
+  return {
+    sections = {
+      {
+        section = 'terminal',
+        cmd = 'chafa ' .. route .. terminal_image .. ' --format symbols --symbols vhalf --stretch; sleep .1',
+        height = 17,
+        padding = 1,
+      },
+      {
+        pane = 2,
+        { section = 'keys', gap = 1, padding = 1 },
+        { section = 'startup' },
+      },
+    },
+  }
 end
 
 return M
