@@ -10,11 +10,17 @@ map({ 'n', 'x' }, 'k', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, 
 map({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { desc = 'Up', expr = true, silent = true })
 
 -- better indenting
-map('x', '<', '<gv')
-map('x', '>', '>gv')
 
-map('i', '<M-1>', '<')
-map('i', '<M-2>', '>')
+local indenting_left = '<M-1>'
+local indenting_right = '<M-2>'
+map('n', indenting_left .. indenting_left, '<<')
+map('n', indenting_right .. indenting_right, '>>')
+map('i', indenting_left, '<')
+map('i', indenting_right, '>')
+map('v', indenting_left, '<')
+map('v', indenting_right, '>')
+map('x', indenting_left, '<gv')
+map('x', indenting_right, '>gv')
 
 -- quit
 map('n', '<leader>qQ', '<cmd>qa<cr>', { desc = 'Quit All' }) -- EXIT NEOVIM
@@ -72,7 +78,3 @@ map('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 map('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 map('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 map('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
-
--- TEMPORAL --
-map('v', 't', '<')
-map('v', 'T', '>')

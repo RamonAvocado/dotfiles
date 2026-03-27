@@ -63,7 +63,6 @@ return {
     completion = {
       -- By default, you may press `<c-space>` to show the documentation.
       -- Optionally, set `auto_show = true` to show the documentation after a delay.
-      menu = { auto_show = true, auto_show_delay_ms = 20 },
       documentation = { auto_show = false, auto_show_delay_ms = 100 },
     },
 
