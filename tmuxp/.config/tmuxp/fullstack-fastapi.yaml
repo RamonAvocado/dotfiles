@@ -1,10 +1,8 @@
 session_name: main
-start_directory: ~/repos/Stock/
+start_directory: ~/repos/my-fullstack/
 
 windows:
   - window_name: editor
-    # start_directory: ruta/opcional
-    # layout: even-horizontal (opcional)
     panes:
       - nvim .
 
@@ -12,10 +10,11 @@ windows:
     # layout: even-vertical
     layout: even-horizontal
     panes:
-      - make run-fastapi
-      - npm run dev
+      - null
+      - null
 
   # - window_name: random
   #   panes:
   #     - null
   #     - null
+
