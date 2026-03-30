@@ -1,4 +1,4 @@
-session_name: main
+session_name: stock
 start_directory: ~/repos/Stock/
 
 windows:
