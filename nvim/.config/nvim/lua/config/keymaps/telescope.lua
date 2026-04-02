@@ -1,5 +1,7 @@
 local M = {}
 
+function M.setup() end
+
 local builtin = require 'telescope.builtin' -- See `:help telescope.builtin`
 local map = vim.keymap.set
 

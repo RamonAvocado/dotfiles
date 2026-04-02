@@ -68,6 +68,8 @@ return {
     -- if not ok then
     --   require('telescope.builtin').find_files()
     -- end
+
+    require('config.keymaps.telescope').setup()
   end,
 }
 
