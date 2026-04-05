@@ -1,0 +1,21 @@
+session_name: coding-agent
+start_directory: ~/repos/coding-agent/
+
+windows:
+  - window_name: editor
+    # start_directory: ruta/opcional
+    # layout: even-horizontal (opcional)
+    panes:
+      - eval-ssh && nvim .
+
+  - window_name: server
+    # layout: even-vertical
+    layout: even-horizontal
+    panes:
+      - cd docker/claude && docker compose up
+      - null
+      - null
+
+  - window_name: claude
+    panes:
+      - docker exec -it claude-sandbox bash -c "/scripts/ssh-handle.sh && ollama launch claude"
