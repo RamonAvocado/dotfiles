@@ -6,7 +6,7 @@ windows:
     # start_directory: ruta/opcional
     # layout: even-horizontal (opcional)
     panes:
-      - nvim .
+      - eval-ssh && nvim .
 
   - window_name: server
     # layout: even-vertical

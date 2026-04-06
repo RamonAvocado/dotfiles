@@ -18,4 +18,4 @@ windows:
 
   - window_name: claude
     panes:
-      - docker exec -it claude-sandbox bash -c "/scripts/ssh-handle.sh && ollama launch claude"
+      - docker exec -it claude-sandbox bash -c "source /scripts/ssh-handle.sh && ollama launch claude"

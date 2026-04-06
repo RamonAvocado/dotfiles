@@ -3,10 +3,9 @@ start_directory: ~/repos/Stock/
 
 windows:
   - window_name: editor
-    # start_directory: ruta/opcional
     # layout: even-horizontal (opcional)
     panes:
-      - nvim .
+      - eval-ssh && nvim .
 
   - window_name: server
     # layout: even-vertical

@@ -1,10 +1,10 @@
-session_name: main
+session_name: gym-project
 start_directory: ~/repos/gym-project/
 
 windows:
   - window_name: editor
     panes:
-      - nvim .
+      - eval-ssh && nvim .
 
   - window_name: server
     # layout: even-vertical

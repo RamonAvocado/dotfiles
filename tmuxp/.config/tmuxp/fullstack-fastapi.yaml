@@ -4,7 +4,7 @@ start_directory: ~/repos/my-fullstack/
 windows:
   - window_name: editor
     panes:
-      - nvim .
+      - eval-ssh && nvim .
 
   - window_name: server
     # layout: even-vertical
