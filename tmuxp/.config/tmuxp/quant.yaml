@@ -1,0 +1,19 @@
+session_name: main
+start_directory: ~/repos/quanttrading/
+
+windows:
+  - window_name: editor
+    panes:
+      - eval-ssh && nvim .
+
+  - window_name: agent
+    layout: even-horizontal
+    panes:
+      - opencode
+
+  - window_name: random
+    layout: even-horizontal
+    panes:
+      - null
+      - null
+

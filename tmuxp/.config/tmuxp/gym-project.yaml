@@ -6,15 +6,14 @@ windows:
     panes:
       - eval-ssh && nvim .
 
+  - window_name: ai
+    panes:
+      - opencode .
+
   - window_name: server
     # layout: even-vertical
     layout: even-horizontal
     panes:
       - null
       - null
-      - null
 
-  - window_name: random
-    panes:
-      - null
-      - null
