@@ -39,7 +39,11 @@ map('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 map('n', '<leader>sp', builtin.resume, { desc = '[S]earch [P]revious' })
 
 -- TODO: Maybe only search in the harpoon files
-map('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+map('n', '<leader>s.', function()
+  builtin.current_buffer_fuzzy_find {
+    default_text = vim.fn.expand '<cword>',
+  }
+end, { desc = '[S]earch word under cursor in current file' })
 
 -- SEARCH THINGS IN THE CURRENT BUFFERS
 map('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
