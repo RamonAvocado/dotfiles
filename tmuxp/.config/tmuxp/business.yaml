@@ -1,5 +1,5 @@
-session_name: quant
-start_directory: ~/repos/quanttrading/
+session_name: business
+start_directory: ~/repos/business-connection/
 
 windows:
   - window_name: editor
@@ -16,4 +16,5 @@ windows:
     panes:
       - null
       - null
+
 
